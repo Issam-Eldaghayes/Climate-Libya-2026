@@ -1,0 +1,160 @@
+/* Custom Styles for Climate Libya Conference */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes pulse-gold {
+    0% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 20px rgba(212, 175, 55, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+    }
+}
+
+.btn-pulse-gold {
+    animation: pulse-gold 2s infinite;
+}
+
+/* Header Config */
+.header-transparent {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+    color: #1f2937;
+}
+
+.header-scrolled {
+    background-color: theme('colors.brand.sky');
+    box-shadow: 0 4px 10px -1px rgba(0, 0, 0, 0.1);
+    color: white !important;
+}
+
+.header-scrolled a {
+    color: white !important;
+}
+
+.header-scrolled a:hover {
+    color: theme('colors.brand.darkBlue') !important;
+}
+
+/* Hero Background */
+.hero-bg {
+    background: linear-gradient(135deg, theme('colors.brand.sky'), theme('colors.brand.lightSky'));
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('hero-pattern.png') no-repeat center center; /* Placeholder for realistic pattern */
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+/* Fade-In Elements */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in-element.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Timeline */
+.timeline-container {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline-line {
+    width: 3px;
+    background: theme('colors.brand.gold');
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.timeline-item-wrapper {
+    position: relative;
+    width: 50%;
+    margin-bottom: 2rem;
+}
+
+.timeline-item-right {
+    right: 0;
+    padding-left: 2rem;
+    padding-right: 40px;
+}
+
+.timeline-item-left {
+    right: 50%;
+    padding-right: 2rem;
+    padding-left: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 20px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: theme('colors.brand.gold');
+    border: 5px solid white;
+    box-shadow: 0 0 0 3px rgba(212,175,55,0.3);
+}
+
+.timeline-item-right .timeline-dot {
+    right: -12px;
+}
+
+.timeline-item-left .timeline-dot {
+    left: -12px;
+}
+
+@media (max-width: 768px) {
+    .timeline-line {
+        right: 30px;
+        transform: none;
+    }
+    .timeline-item-wrapper {
+        width: 100%;
+        right: 0;
+        padding-right: 60px !important;
+        padding-left: 20px !important;
+    }
+    .timeline-item-left {
+        right: auto;
+    }
+    .timeline-item-right .timeline-dot,
+    .timeline-item-left .timeline-dot {
+        right: 18px;
+        left: auto;
+    }
+}
+
+/* Accordion */
+.accordion-content {
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
