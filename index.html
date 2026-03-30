@@ -165,6 +165,7 @@
           <nav class="hidden md:flex justify-center gap-4 lg:gap-6">
             <a href="#hero"
               class="text-sm font-semibold text-gray-700 hover:text-sky-600 transition-colors">الرئيسية</a>
+            <a href="#news" class="text-sm font-semibold text-gray-700 hover:text-sky-600 transition-colors">الأخبار</a>
             <a href="#about" class="text-sm font-semibold text-gray-700 hover:text-sky-600 transition-colors">عن
               المؤتمر</a>
             <a href="#tracks"
@@ -199,6 +200,9 @@
   <div id="mobile-menu"
     class="hidden md:hidden bg-blue-900 border-b border-blue-800 px-4 py-3 space-y-2 shadow-2xl fixed top-[100px] w-full z-40 transition-all"
     dir="rtl">
+    <a href="#news"
+      class="block text-sm font-semibold py-2 px-3 text-white hover:bg-blue-800 rounded-md transition-colors">الأخبار</a>
+
     <a href="#about"
       class="block text-sm font-semibold py-2 px-3 text-white hover:bg-blue-800 rounded-md transition-colors">عن
       المؤتمر</a>
@@ -277,6 +281,82 @@
         <a href="#contact"
           class="border-2 border-white text-white font-bold px-7 py-3 rounded-full hover:bg-white hover:text-sky-700 transition-all hover:scale-105">تواصل
           معنا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== NEWS ===================== -->
+  <section id="news" class="py-20 px-4 bg-gray-50 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14 fade-in-element flex flex-col items-center">
+        <span
+          class="inline-block bg-sky-100 text-sky-700 text-sm font-bold px-4 py-1 rounded-full mb-3">مستجداتنا</span>
+        <h2 class="text-3xl md:text-4xl font-black text-gray-800 mb-4">أحدث الأخبار</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-gold to-sky-DEFAULT mx-auto rounded-full"
+          style="background:linear-gradient(to right,#C9A84C,#0077B6)"></div>
+      </div>
+
+      <!-- News Item -->
+      <div
+        class="bg-white rounded-2xl shadow-xl overflow-hidden fade-in-element gold-border mb-10 group hover:shadow-2xl transition-all duration-300">
+        <!-- Date -->
+        <div class="bg-gradient-to-r from-sky-700 to-sky-900 text-white px-6 py-3 flex items-center gap-3">
+          <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <span class="font-bold text-sm">24 مارس 2026</span>
+        </div>
+
+        <div class="p-6 md:p-8">
+          <h3 class="text-2xl font-black text-gray-800 mb-6 leading-relaxed group-hover:text-sky-700 transition-colors">
+            أجتماع اللجنة العليا للمؤتمر الليبي العلمي الأول حول التكيف مع التغيرات المناخية وانعكاساتها على الأمن
+            والبيئة</h3>
+          <p class="text-gray-700 text-lg leading-loose text-justify mb-8 font-semibold">
+            ضمن سلسلة اجتماعاتها الدورية، عقدت اللجنة العليا للمؤتمر اجتماعاً تشاورياً برئاسة رئيس اللجنة العليا العميد
+            ركن دكتور عثمان عيسى مخلوف، ورؤساء اللجان الفرعية حيث عرض كل رئيس لجنة الأعمال المنجزة التي قام بها والمصاعب
+            والتحديات التي تواجه العمل، ولقد أحاطت الدكتورة مفيدة بلق رئيسة اللجنة العلمية المجتمعين علماً بآخر إحصائيات
+            ونوعية ملخصات الأوراق البحثية الواردة، مثمنةً الثقة الكبيرة التي أولاها الوسط الأكاديمي للمؤتمر عبر حجم
+            المشاركة اللافت. كما تم تدارس الملاحظات الواردة من رؤساء اللجان الفرعية لتعزيز جودة التنفيذ. وقد شدد رئيس
+            اللجنة في ختام الاجتماع على أهمية التفاني في العمل والالتزام بمعايير الجودة، لضمان ظهور المؤتمر بمستوى علمي
+            وتنظيمي متميز وأنه على استعداد دائما لتذليل أي صعوبات قد تواجه أي لجنة أثناء قيامها بعملها ليخرج هذا الحدث
+            العلمي الوطني بصورة تليق بمكانة ليبيا وتطلعاتها في ملف التغيرات المناخية.
+          </p>
+
+          <!-- Images Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div
+              class="aspect-square relative overflow-hidden rounded-xl shadow-md group-hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
+              <img src="AttachedFiles/news/1.jpeg" alt="صورة الاجتماع 1"
+                class="absolute inset-0 w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/400x400?text=جاري+العرض'">
+            </div>
+            <div
+              class="aspect-square relative overflow-hidden rounded-xl shadow-md group-hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
+              <img src="AttachedFiles/news/2.jpeg" alt="صورة الاجتماع 2"
+                class="absolute inset-0 w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/400x400?text=جاري+العرض'">
+            </div>
+            <div
+              class="aspect-square relative overflow-hidden rounded-xl shadow-md group-hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
+              <img src="AttachedFiles/news/3.jpeg" alt="صورة الاجتماع 3"
+                class="absolute inset-0 w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/400x400?text=جاري+العرض'">
+            </div>
+            <div
+              class="aspect-square relative overflow-hidden rounded-xl shadow-md group-hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
+              <img src="AttachedFiles/news/4.jpeg" alt="صورة الاجتماع 4"
+                class="absolute inset-0 w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/400x400?text=جاري+العرض'">
+            </div>
+            <div
+              class="aspect-square relative overflow-hidden rounded-xl shadow-md group-hover:shadow-lg transition-transform hover:scale-105 cursor-pointer">
+              <img src="AttachedFiles/news/5.jpeg" alt="صورة الاجتماع 5"
+                class="absolute inset-0 w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/400x400?text=جاري+العرض'">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -535,7 +615,7 @@
             </tr>
             <tr class="hover:bg-sky-50 transition-colors">
               <td class="py-3 px-5 text-yellow-600 font-black">6</td>
-              <td class="py-3 px-5 text-gray-700">ألا يزيد عدد المشاركين في البحث الواحد على اثنين.</td>
+              <td class="py-3 px-5 text-gray-700">أن لا يزيد عدد المشاركين في البحث الواحد على اثنين.</td>
             </tr>
             <tr class="hover:bg-sky-50 transition-colors">
               <td class="py-3 px-5 text-yellow-600 font-black">7</td>
@@ -810,6 +890,18 @@
       <!-- <p class="text-gray-600 text-xs">طرابلس — ليبيا | 14-15-16 يوليو 2026م | تكيف — أمن — استدامة</p> -->
     </div>
   </footer>
+
+  <!-- ===================== LIGHTBOX ===================== -->
+  <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden flex-col items-center justify-center backdrop-blur-sm transition-opacity opacity-0">
+    <button id="lightbox-close" class="absolute top-6 right-6 text-white hover:text-red-400 transition-colors bg-white/10 hover:bg-white/20 rounded-full p-2">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <img id="lightbox-img" src="" alt="عرض الصورة الكاملة" class="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl border-4 border-white/10 scale-95 transition-transform duration-300">
+    <a id="lightbox-download" href="" download class="mt-6 flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-yellow-900 font-bold px-6 py-3 rounded-full transition-colors shadow-lg">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+      تحميل الصورة المستعرضة
+    </a>
+  </div>
 
   <script src="script.js"></script>
 </body>
