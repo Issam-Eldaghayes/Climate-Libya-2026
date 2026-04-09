@@ -49,19 +49,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Fade-in on Scroll observer
     const fadeElements = document.querySelectorAll('.fade-in-element');
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                obs.unobserve(entry.target);
-            }
+    
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.05,
+            rootMargin: "0px 0px 0px 0px"
         });
-    }, {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    });
 
-    fadeElements.forEach(el => observer.observe(el));
+        fadeElements.forEach(el => observer.observe(el));
+        
+        // Fallback: ensure news items are visible after a short delay
+        // in case IntersectionObserver doesn't trigger (e.g. on some mobile browsers)
+        setTimeout(() => {
+            const newsSection = document.getElementById('news');
+            if (newsSection) {
+                newsSection.querySelectorAll('.fade-in-element').forEach(el => {
+                    el.classList.add('is-visible');
+                });
+            }
+        }, 1500);
+    } else {
+        // Fallback for browsers that don't support IntersectionObserver
+        fadeElements.forEach(el => el.classList.add('is-visible'));
+    }
 
     // 4. Mobile Menu Toggle
     const menuBtn = document.getElementById('menu-btn');
